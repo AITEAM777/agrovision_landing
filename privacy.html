@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Політика конфіденційності та Умови використання — AgroVision</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#f8faf8; --bg2:#ffffff; --border:#e0ece0;
+  --green:#2d7a2d; --lime:#5a9a2a; --text:#1a2a1a;
+  --text2:#4a6a4a; --text3:#8aaa8a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Onest',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;font-size:15px}
+
+/* TOP NAV */
+.top-nav{
+  background:#fff;border-bottom:1px solid var(--border);
+  padding:0 5%;height:62px;display:flex;align-items:center;
+  justify-content:space-between;position:sticky;top:0;z-index:100;
+}
+.logo{font-family:'Unbounded',sans-serif;font-size:17px;font-weight:700;color:var(--green);text-decoration:none}
+.back-btn{
+  font-size:13px;color:var(--text2);text-decoration:none;
+  display:flex;align-items:center;gap:6px;
+  padding:7px 14px;border:1px solid var(--border);border-radius:8px;
+  transition:all .15s;
+}
+.back-btn:hover{border-color:var(--green);color:var(--green)}
+
+/* HERO */
+.doc-hero{
+  background:linear-gradient(135deg,#0d1f0d 0%,#1a3a1a 100%);
+  padding:52px 5% 44px;color:#e8f0e8;
+}
+.doc-hero .badge{
+  display:inline-block;background:rgba(168,224,99,.15);border:1px solid rgba(168,224,99,.25);
+  color:#a8e063;font-size:11px;font-weight:600;padding:4px 12px;
+  border-radius:20px;letter-spacing:.5px;margin-bottom:16px;
+}
+.doc-hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(22px,4vw,34px);font-weight:700;margin-bottom:10px}
+.doc-hero p{font-size:14px;color:#8aaa8a;max-width:580px}
+.doc-meta{
+  display:flex;gap:24px;margin-top:20px;flex-wrap:wrap;
+  font-size:12px;color:#6a8a6a;
+}
+.doc-meta span{display:flex;align-items:center;gap:5px}
+
+/* LAYOUT */
+.doc-wrap{max-width:900px;margin:0 auto;padding:40px 5% 80px;display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
+@media(max-width:760px){.doc-wrap{grid-template-columns:1fr}.sidebar{display:none}}
+
+/* SIDEBAR */
+.sidebar{position:sticky;top:80px}
+.sidebar-title{font-size:11px;font-weight:600;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.sidebar a{
+  display:block;font-size:13px;color:var(--text2);text-decoration:none;
+  padding:7px 10px;border-radius:7px;margin-bottom:2px;border-left:2px solid transparent;
+  transition:all .15s;
+}
+.sidebar a:hover{background:#f0f8f0;color:var(--green);border-left-color:var(--green)}
+.sidebar a.active{background:#f0f8f0;color:var(--green);border-left-color:var(--green);font-weight:500}
+
+/* CONTENT */
+.content h2{
+  font-family:'Unbounded',sans-serif;font-size:18px;font-weight:700;
+  color:var(--green);margin:40px 0 14px;padding-top:20px;
+  border-top:1px solid var(--border);
+}
+.content h2:first-child{border-top:none;margin-top:0;padding-top:0}
+.content h3{font-size:15px;font-weight:600;color:var(--text);margin:20px 0 8px}
+.content p{color:#2a3a2a;margin-bottom:12px;line-height:1.85}
+.content ul,.content ol{padding-left:20px;margin-bottom:14px}
+.content li{color:#2a3a2a;margin-bottom:6px;line-height:1.7}
+.content strong{color:var(--green);font-weight:600}
+
+/* INFO BOXES */
+.info-box{
+  background:#f0f8f0;border:1px solid #c0dcc0;border-left:4px solid var(--green);
+  border-radius:0 10px 10px 0;padding:14px 18px;margin:16px 0;
+}
+.info-box.warn{background:#fffbf0;border-color:#f0c860;border-left-color:#d4a843}
+.info-box p{margin-bottom:0;font-size:13px;color:#2a3a2a}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+th{background:#f0f8f0;border:1px solid var(--border);padding:10px 14px;text-align:left;font-weight:600;color:var(--green)}
+td{border:1px solid var(--border);padding:9px 14px;color:#2a3a2a;vertical-align:top}
+tr:nth-child(even) td{background:#fafffe}
+
+/* CONTACT CARD */
+.contact-card{
+  background:#fff;border:1px solid var(--border);border-radius:14px;
+  padding:22px 24px;margin-top:16px;
+}
+.contact-row{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border)}
+.contact-row:last-child{border-bottom:none}
+.contact-icon{width:32px;text-align:center;font-size:18px}
+.contact-label{font-size:12px;color:var(--text3);min-width:100px}
+.contact-val{font-size:13px;color:var(--green);font-weight:500}
+
+/* TOC JUMP */
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0 32px}
+@media(max-width:500px){.toc-grid{grid-template-columns:1fr}}
+.toc-item{
+  background:#fff;border:1px solid var(--border);border-radius:10px;
+  padding:12px 14px;text-decoration:none;color:var(--text2);font-size:13px;
+  display:flex;align-items:center;gap:8px;transition:all .15s;
+}
+.toc-item:hover{border-color:var(--green);color:var(--green);background:#f8fdf8}
+.toc-num{
+  width:22px;height:22px;border-radius:50%;background:#f0f8f0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:var(--green);flex-shrink:0;
+}
+
+/* PRINT */
+@media print{.top-nav,.sidebar{display:none}.doc-wrap{grid-template-columns:1fr}}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--border)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="top-nav">
+  <a class="logo" href="/">AgroVision</a>
+  <div style="display:flex;gap:8px;align-items:center">
+    <a href="javascript:window.print()" class="back-btn">🖨️ Друк / PDF</a>
+    <a href="/" class="back-btn">← Повернутись</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="doc-hero">
+  <div class="badge">Юридичні документи</div>
+  <h1>Політика конфіденційності<br>та Умови використання</h1>
+  <p>Ці документи визначають правила використання платформи AgroVision, обробку ваших персональних даних та взаємні права і обов'язки сторін.</p>
+  <div class="doc-meta">
+    <span>📅 Редакція від 1 червня 2026 р.</span>
+    <span>🇺🇦 Регулюється законодавством України</span>
+    <span>📄 Версія 1.2</span>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="doc-wrap">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-title">Зміст</div>
+    <a href="#s1">1. Загальні положення</a>
+    <a href="#s2">2. Терміни та визначення</a>
+    <a href="#s3">3. Умови використання</a>
+    <a href="#s4">4. Реєстрація та акаунт</a>
+    <a href="#s5">5. Тарифи та оплата</a>
+    <a href="#s6">6. Персональні дані</a>
+    <a href="#s7">7. Збір та обробка даних</a>
+    <a href="#s8">8. Захист даних</a>
+    <a href="#s9">9. Права користувача</a>
+    <a href="#s10">10. Обмеження відповідальності</a>
+    <a href="#s11">11. Інтелектуальна власність</a>
+    <a href="#s12">12. Зміни та розірвання</a>
+    <a href="#s13">13. Контакти</a>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <div class="info-box">
+      <p>📌 <strong>Коротко:</strong> ми збираємо тільки ті дані, які потрібні для роботи сервісу. Ваші дані зберігаються в Україні, не продаються третім особам і захищені шифруванням. Ви можете видалити свій акаунт і всі дані в будь-який момент.</p>
+    </div>
+
+    <!-- ЗМIСТ -->
+    <div class="toc-grid">
+      <a href="#s1" class="toc-item"><div class="toc-num">1</div>Загальні положення</a>
+      <a href="#s2" class="toc-item"><div class="toc-num">2</div>Терміни</a>
+      <a href="#s3" class="toc-item"><div class="toc-num">3</div>Умови використання</a>
+      <a href="#s4" class="toc-item"><div class="toc-num">4</div>Реєстрація</a>
+      <a href="#s5" class="toc-item"><div class="toc-num">5</div>Тарифи та оплата</a>
+      <a href="#s6" class="toc-item"><div class="toc-num">6</div>Персональні дані</a>
+      <a href="#s7" class="toc-item"><div class="toc-num">7</div>Збір даних</a>
+      <a href="#s8" class="toc-item"><div class="toc-num">8</div>Захист даних</a>
+      <a href="#s9" class="toc-item"><div class="toc-num">9</div>Права користувача</a>
+      <a href="#s10" class="toc-item"><div class="toc-num">10</div>Відповідальність</a>
+      <a href="#s11" class="toc-item"><div class="toc-num">11</div>Інтел. власність</a>
+      <a href="#s12" class="toc-item"><div class="toc-num">12</div>Зміни та розірвання</a>
+    </div>
+
+    <!-- 1 -->
+    <h2 id="s1">1. Загальні положення</h2>
+    <p>Цей документ є публічною офертою та регулює відносини між <strong>ТОВ «АгроВіжн Україна»</strong> (далі — «Компанія», «ми») і фізичними або юридичними особами (далі — «Користувач», «ви»), які використовують платформу AgroVision, доступну за адресою <strong>agrovision.ua</strong> та пов'язані мобільні застосунки.</p>
+    <p>Реєструючись на платформі або використовуючи будь-які її функції, ви підтверджуєте, що ознайомились з цими умовами, розумієте їх і повністю погоджуєтесь з ними. Якщо ви не погоджуєтесь з будь-яким пунктом — будь ласка, не використовуйте платформу.</p>
+    <p>Ці умови набувають чинності з моменту реєстрації акаунту і залишаються дійсними до моменту його видалення або розірвання договору однією зі сторін.</p>
+
+    <!-- 2 -->
+    <h2 id="s2">2. Терміни та визначення</h2>
+    <ul>
+      <li><strong>Платформа</strong> — веб-сайт agrovision.ua, мобільні додатки та API-сервіси AgroVision.</li>
+      <li><strong>Користувач</strong> — будь-яка особа, яка зареєстрована на Платформі та використовує її функціонал.</li>
+      <li><strong>Акаунт</strong> — особистий обліковий запис Користувача з унікальними ідентифікаційними даними.</li>
+      <li><strong>Персональні дані</strong> — будь-яка інформація, що дозволяє ідентифікувати Користувача.</li>
+      <li><strong>Сервіс</strong> — сукупність функцій, інструментів та можливостей, що надаються Платформою.</li>
+      <li><strong>Підписка</strong> — платний або безкоштовний план доступу до функцій Платформи.</li>
+      <li><strong>Агрономічні дані</strong> — інформація про поля, посіви, техніку, врожайність, що вводить або генерує Користувач у системі.</li>
+    </ul>
+
+    <!-- 3 -->
+    <h2 id="s3">3. Умови використання сервісу</h2>
+    <h3>3.1 Дозволене використання</h3>
+    <p>Ви маєте право використовувати AgroVision виключно в законних цілях, пов'язаних з управлінням сільськогосподарським господарством, моніторингом полів, плануванням виробництва та купівлею-продажем сільськогосподарської продукції.</p>
+    <h3>3.2 Заборонені дії</h3>
+    <p>Користувачу <strong>забороняється:</strong></p>
+    <ul>
+      <li>публікувати на маркетплейсі неіснуючі або фіктивні оголошення з метою шахрайства;</li>
+      <li>намагатися отримати несанкціонований доступ до акаунтів інших користувачів;</li>
+      <li>використовувати автоматизовані скрипти для масового збору даних (парсинг);</li>
+      <li>розповсюджувати шкідливе програмне забезпечення або здійснювати кібератаки;</li>
+      <li>надавати завідомо неправдиву інформацію при реєстрації або в оголошеннях;</li>
+      <li>порушувати права інтелектуальної власності Компанії або третіх осіб;</li>
+      <li>перепродавати або передавати доступ до акаунту третім особам без письмової згоди Компанії.</li>
+    </ul>
+    <div class="info-box warn">
+      <p>⚠️ Порушення цих умов може призвести до тимчасового або постійного блокування акаунту без відшкодування коштів.</p>
+    </div>
+
+    <!-- 4 -->
+    <h2 id="s4">4. Реєстрація та обліковий запис</h2>
+    <p>Для використання більшості функцій Платформи необхідна реєстрація. Ви зобов'язані надати достовірну інформацію та підтримувати її актуальність. Реєстрація доступна особам, які досягли <strong>18 років</strong>, або юридичним особам.</p>
+    <p>Ви несете повну відповідальність за безпеку вашого паролю та всі дії, що відбуваються у вашому акаунті. У разі підозри на несанкціонований доступ — негайно зверніться до нашої служби підтримки.</p>
+    <p>Компанія залишає за собою право відмовити в реєстрації або заблокувати акаунт без пояснення причин у разі порушення цих умов.</p>
+
+    <!-- 5 -->
+    <h2 id="s5">5. Тарифи, оплата та повернення коштів</h2>
+    <h3>5.1 Тарифні плани</h3>
+    <table>
+      <thead><tr><th>План</th><th>Вартість</th><th>Умови</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Пробний</strong></td><td>Безкоштовно</td><td>7 днів повного доступу, без картки</td></tr>
+        <tr><td><strong>Стандарт</strong></td><td>₴10,000 / місяць</td><td>До 100 га, 10 полів, GPS до 5 одиниць</td></tr>
+        <tr><td><strong>Преміум</strong></td><td>₴20,000 / місяць</td><td>Необмежено, API, персональний менеджер</td></tr>
+      </tbody>
+    </table>
+    <h3>5.2 Оплата</h3>
+    <p>Оплата здійснюється щомісяця наперед банківською карткою або банківським переказом. Всі ціни вказані у гривнях з урахуванням ПДВ. Компанія залишає за собою право змінювати тарифи з попередженням Користувача за 30 днів.</p>
+    <h3>5.3 Повернення коштів</h3>
+    <p>Якщо ви незадоволені сервісом протягом перших <strong>14 днів</strong> після першої оплати — ми повернемо кошти в повному обсязі без жодних питань. Для цього надішліть запит на <strong>hello@agrovision.ua</strong>. Повернення після 14 днів розглядається індивідуально.</p>
+    <h3>5.4 Скасування підписки</h3>
+    <p>Ви можете скасувати підписку в будь-який момент у налаштуваннях акаунту. Доступ до сплачених функцій зберігається до кінця поточного оплаченого місяця. Автоматичного списання після скасування не відбувається.</p>
+
+    <!-- 6 -->
+    <h2 id="s6">6. Персональні дані — Загальні принципи</h2>
+    <p>AgroVision дотримується вимог <strong>Закону України «Про захист персональних даних» № 2297-VI</strong> та Регламенту ЄС GDPR у частині, що стосується обробки даних громадян ЄС.</p>
+    <p>Ми збираємо тільки ті дані, які необхідні для надання якісного сервісу. Ми ніколи не продаємо ваші персональні дані третім особам і не використовуємо їх для цілей, не пов'язаних з наданням послуг AgroVision.</p>
+
+    <!-- 7 -->
+    <h2 id="s7">7. Які дані ми збираємо та навіщо</h2>
+    <table>
+      <thead><tr><th>Категорія даних</th><th>Що саме</th><th>Мета збору</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ідентифікаційні</strong></td><td>Ім'я, email, номер телефону</td><td>Реєстрація акаунту, зв'язок</td></tr>
+        <tr><td><strong>Агрономічні</strong></td><td>Координати полів, культури, площі, врожайність</td><td>Моніторинг, AI-аналіз, звіти</td></tr>
+        <tr><td><strong>GPS-дані техніки</strong></td><td>Координати, маршрути, час роботи</td><td>Відстеження техніки в реальному часі</td></tr>
+        <tr><td><strong>Фінансові</strong></td><td>Тип підписки, дата оплати (не номер картки)</td><td>Управління підпискою</td></tr>
+        <tr><td><strong>Технічні</strong></td><td>IP-адреса, браузер, пристрій, cookies</td><td>Безпека, покращення сервісу</td></tr>
+        <tr><td><strong>Медіа</strong></td><td>Фото рослин, завантажені документи</td><td>AI-аналіз, маркетплейс</td></tr>
+      </tbody>
+    </table>
+    <h3>7.1 Дані третіх сервісів</h3>
+    <p>Для роботи деяких функцій ми взаємодіємо з: <strong>Telegram</strong> (сповіщення), <strong>Anthropic Claude AI</strong> (AI-агроном — ваші запити обробляються відповідно до політики Anthropic), <strong>ESA Sentinel-2</strong> (супутникові знімки). Ці сервіси мають власні політики конфіденційності.</p>
+
+    <!-- 8 -->
+    <h2 id="s8">8. Захист та зберігання даних</h2>
+    <ul>
+      <li>Всі дані зберігаються на серверах, розташованих <strong>в Україні</strong>.</li>
+      <li>Передача даних між браузером і сервером захищена протоколом <strong>SSL/TLS (HTTPS)</strong>.</li>
+      <li>Паролі зберігаються у захешованому вигляді — ми не знаємо ваш пароль.</li>
+      <li>Дані шифруються стандартом <strong>AES-256</strong> в стані спокою.</li>
+      <li>Доступ до бази даних мають тільки уповноважені співробітники Компанії.</li>
+      <li>Регулярні резервні копії зберігаються протягом 30 днів.</li>
+    </ul>
+    <div class="info-box">
+      <p>🔒 Ми проводимо регулярні аудити безпеки і оперативно усуваємо будь-які виявлені вразливості. У разі витоку даних ми зобов'язуємося повідомити вас протягом 72 годин відповідно до вимог GDPR.</p>
+    </div>
+
+    <!-- 9 -->
+    <h2 id="s9">9. Ваші права щодо персональних даних</h2>
+    <p>Відповідно до законодавства України і GDPR ви маєте право:</p>
+    <ul>
+      <li><strong>Право на доступ</strong> — отримати копію всіх ваших даних, що зберігаються у нас.</li>
+      <li><strong>Право на виправлення</strong> — оновити або виправити неточні дані у своєму акаунті.</li>
+      <li><strong>Право на видалення</strong> — видалити акаунт і всі пов'язані дані назавжди.</li>
+      <li><strong>Право на обмеження</strong> — обмежити обробку ваших даних у певних випадках.</li>
+      <li><strong>Право на перенесення</strong> — отримати ваші дані у машинозчитуваному форматі (CSV, JSON).</li>
+      <li><strong>Право на заперечення</strong> — заперечити проти використання ваших даних у маркетингових цілях.</li>
+    </ul>
+    <p>Для реалізації будь-якого з цих прав надішліть запит на <strong>privacy@agrovision.ua</strong>. Ми розглянемо його протягом <strong>30 днів</strong>.</p>
+
+    <!-- 10 -->
+    <h2 id="s10">10. Обмеження відповідальності</h2>
+    <p>AgroVision надає інформаційні послуги і не несе юридичної відповідальності за:</p>
+    <ul>
+      <li>рішення Користувача щодо продажу врожаю, прийняті на основі даних платформи;</li>
+      <li>точність прогнозів AI-агронома — вони носять рекомендаційний характер;</li>
+      <li>збитки від тимчасової недоступності сервісу (технічні роботи, форс-мажор);</li>
+      <li>дії третіх сторін на маркетплейсі — ми надаємо майданчик, але не є стороною угод між фермерами і покупцями;</li>
+      <li>втрату врожаю або майна, якщо причиною стали некоректно введені дані GPS-трекерів.</li>
+    </ul>
+    <p>Сукупна відповідальність Компанії перед Користувачем не може перевищувати суму, сплачену Користувачем за останні 3 місяці підписки.</p>
+
+    <!-- 11 -->
+    <h2 id="s11">11. Інтелектуальна власність</h2>
+    <p>Всі елементи платформи AgroVision — логотип, дизайн, програмний код, алгоритми AI, бази даних, контент — є виключною власністю <strong>ТОВ «АгроВіжн Україна»</strong> або ліцензовані нами. Вони захищені законодавством України про авторське право та суміжні права.</p>
+    <p>Ваші агрономічні дані (поля, врожайність, дані техніки) залишаються <strong>вашою власністю</strong>. Ми використовуємо їх виключно для надання вам послуг і не передаємо конкурентам або третім особам без вашої згоди.</p>
+    <p>Ви надаєте нам обмежену ліцензію на обробку ваших даних виключно з метою надання послуг AgroVision.</p>
+
+    <!-- 12 -->
+    <h2 id="s12">12. Зміни умов та розірвання</h2>
+    <h3>12.1 Зміни умов</h3>
+    <p>Ми можемо вносити зміни до цього документу. При суттєвих змінах ми повідомимо вас електронним листом і через сповіщення в акаунті <strong>за 30 днів до набрання чинності</strong>. Продовження використання Платформи після набрання змін чинності вважається їх прийняттям.</p>
+    <h3>12.2 Розірвання</h3>
+    <p>Ви можете в будь-який момент видалити акаунт у налаштуваннях. Всі ваші дані будуть видалені протягом 30 днів після підтвердження запиту. Деякі дані можуть зберігатися до 90 днів у резервних копіях з метою безпеки.</p>
+    <p>Компанія може розірвати договір у разі систематичного порушення цих умов, з повідомленням за 14 днів (або негайно у разі грубих порушень).</p>
+    <h3>12.3 Застосовне право</h3>
+    <p>Цей договір регулюється законодавством України. Всі спори вирішуються шляхом переговорів, а у разі неможливості — в судах України за місцезнаходженням Компанії.</p>
+
+    <!-- 13 -->
+    <h2 id="s13">13. Контактна інформація</h2>
+    <p>З питань щодо цих умов, обробки персональних даних або роботи сервісу звертайтесь:</p>
+    <div class="contact-card">
+      <div class="contact-row"><div class="contact-icon">🏢</div><div class="contact-label">Компанія</div><div class="contact-val">ТОВ «АгроВіжн Україна»</div></div>
+      <div class="contact-row"><div class="contact-icon">📍</div><div class="contact-label">Адреса</div><div class="contact-val">м. Київ, вул. Хрещатик 22, офіс 14</div></div>
+      <div class="contact-row"><div class="contact-icon">✉️</div><div class="contact-label">Загальний email</div><div class="contact-val">hello@agrovision.ua</div></div>
+      <div class="contact-row"><div class="contact-icon">🔒</div><div class="contact-label">Захист даних</div><div class="contact-val">privacy@agrovision.ua</div></div>
+      <div class="contact-row"><div class="contact-icon">📞</div><div class="contact-label">Телефон</div><div class="contact-val">+38 (044) 123-45-67</div></div>
+      <div class="contact-row"><div class="contact-icon">✈️</div><div class="contact-label">Telegram</div><div class="contact-val">@agrovision_support</div></div>
+    </div>
+
+    <div style="margin-top:40px;padding:20px 24px;background:#f0f8f0;border-radius:12px;text-align:center;font-size:12px;color:var(--text2)">
+      Редакція документу: <strong>1 червня 2026 р.</strong> · Версія 1.2<br>
+      © 2026 ТОВ «АгроВіжн Україна». Всі права захищені.
+    </div>
+
+  </main>
+</div>
+
+<script>
+// Highlight active sidebar link on scroll
+const headings=document.querySelectorAll('.content h2[id]');
+const sideLinks=document.querySelectorAll('.sidebar a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  headings.forEach(h=>{if(window.scrollY>=h.offsetTop-100)cur=h.id});
+  sideLinks.forEach(a=>{
+    a.classList.toggle('active',a.getAttribute('href')==='#'+cur);
+  });
+});
+</script>
+</body>
+</html>
